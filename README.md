@@ -55,26 +55,80 @@ It helps you:
 ## 📁 Project Structure
 
 ```
-
-BrokenURL/
+LinkSentry/
 │
 ├── main.py
+│
 ├── cli/
-│   └── cli.py
+│   ├── cli.py
+│   ├── banner.py
+│   └── ui_components.py
 │
 ├── crawler/
-│   └── crawler.py
+│   ├── crawler.py
+│   ├── fetcher.py
+│   └── link_extractor.py
 │
 ├── core/
 │   ├── scanner.py
 │   ├── url_utils.py
-│   └── ai_fix.py
+│   ├── ai_fix.py
+│   ├── metrics.py
+│   ├── validator.py
+│   └── redirect_chain.py
+│
+├── engine/
+│   ├── worker.py
+│   ├── scheduler.py
+│   └── pipeline.py
 │
 ├── report/
-│   └── report_generator.py
+│   ├── report_generator.py
+│   ├── html_builder.py
+│   └── templates/
+│       └── report_template.html
 │
-└── output/
-└── report.html
+├── dashboard/
+│   ├── backend/
+│   │   └── api.py
+│   ├── frontend/
+│   │   ├── index.html
+│   │   └── app.js
+│   └── websocket/
+│       └── realtime.py
+│
+├── assets/
+│   ├── banner.png
+│   ├── logo.png
+│   └── style.css
+│
+├── logs/
+│   ├── scan.log
+│   └── errors.log
+│
+├── tests/
+│   ├── test_crawler.py
+│   ├── test_scanner.py
+│   └── test_utils.py
+│
+├── scripts/
+│   ├── install.sh
+│   ├── run.sh
+│   └── deploy.sh
+│
+├── config/
+│   ├── settings.json
+│   └── config.py
+│
+├── output/
+│   ├── report.html
+│   ├── broken_urls.json
+│   └── scan_result.json
+│
+├── requirements.txt
+├── README.md
+├── LICENSE
+└── .gitignore
 
 ````
 
