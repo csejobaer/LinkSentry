@@ -1,6 +1,8 @@
 ## ✅ FINAL CLEAN `README.md` (Copy-Paste Ready)
+
 ---
-```markdown
+
+````markdown
 # 🔗 LinkSentry v1.1 → v4.0 (Pro)
 
 **Advanced Broken URL Checker + SEO Crawler + AI Fix Suggestion Tool**
@@ -54,7 +56,7 @@ It helps you:
 
 ## 📁 Project Structure
 
-```
+```text
 LinkSentry/
 │
 ├── main.py
@@ -129,10 +131,11 @@ LinkSentry/
 ├── README.md
 ├── LICENSE
 └── .gitignore
-
 ````
 
 ---
+
+
 
 ## ⚙️ Installation Guide
 
