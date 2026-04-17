@@ -1,6 +1,5 @@
-
 ## ✅ FINAL CLEAN `README.md` (Copy-Paste Ready)
-
+---
 ```markdown
 # 🔗 LinkSentry v1.1 → v4.0 (Pro)
 
