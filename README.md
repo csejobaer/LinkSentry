@@ -2,7 +2,7 @@
 
 ---
 
-````markdown
+
 # 🔗 LinkSentry v1.1 → v4.0 (Pro)
 
 **Advanced Broken URL Checker + SEO Crawler + AI Fix Suggestion Tool**
@@ -284,17 +284,3 @@ If you like this project:
 ---
 
 ## 🚀 License
-
-MIT License
-
-```
-
----
-
-If you want, I can upgrade this to:
-- 🔥 :contentReference[oaicite:0]{index=0}
-- 📸 :contentReference[oaicite:1]{index=1}
-- 🧩 :contentReference[oaicite:2]{index=2}
-
-Just tell me 👍
-```
