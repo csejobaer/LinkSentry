@@ -1,0 +1,10 @@
+aiohttp
+flask
+beautifulsoup4
+playwright
+redis
+rq
+rich
+pandas
+flask_sqlalchemy
+flask_jwt_extended

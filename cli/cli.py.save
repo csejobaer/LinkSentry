@@ -1,0 +1,34 @@
+from rich.console import Console
+from rich.progress import Progress
+import asyncio
+
+from crawler.crawler import crawl_site
+from core.checker import check_urls
+from report.report_generator import generate
+
+console = Console()
+
+def banner():
+    console.print("[bold cyan]LinkSentry v4.0[/bold cyan]")
+
+def start_cli():
+    banner()
+    url = input("Enter URL: ")
+
+    urls = asyncio.run(crawl_site(url))
+
+    results = []
+    with Progress() as progress:
+        task = progress.add_task("Checking URLs...", total=len(urls))
+
+        checked = asyncio.run(check_urls(urls))
+        for r in checked:
+            results.append(r)
+            progress.update(task, advance=1)
+
+    generate(results)
+    console.print("[green]Report generated![/green]")
+
+
+
+

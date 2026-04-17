@@ -1,0 +1,12 @@
+<h1>Dashboard</h1>
+<input id="url">
+<button onclick="scan()">Scan</button>
+
+<script>
+async function scan(){
+ let url = document.getElementById("url").value;
+ let res = await fetch("/scan",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({url})});
+ let data = await res.json();
+ console.log(data);
+}
+</script>
