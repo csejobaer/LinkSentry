@@ -1,470 +1,244 @@
-*নিচে তোমার \*\*LinkSentry (Broken URL + SEO + AI Fix Tool)\*\* এর জন্য একটা complete professional `README.md` দিলাম—GitHub-ready, setup guide সহ।*
 
+## ✅ FINAL CLEAN `README.md` (Copy-Paste Ready)
 
+```markdown
+# 🔗 LinkSentry v1.1 → v4.0 (Pro)
 
-*---*
+**Advanced Broken URL Checker + SEO Crawler + AI Fix Suggestion Tool**
 
+Developed by: [@csejobaer](https://github.com/csejobaer)
 
+---
 
-*# 📄 `README.md`*
+## 🚀 Overview
 
+LinkSentry is a high-performance asynchronous web crawler and broken link analyzer built with Python.
 
+It helps you:
 
-*```markdown*
+- 🔍 Crawl websites (up to 10,000+ URLs)
+- ❌ Detect broken links (404, 403, 500, ERROR)
+- 🔁 Track redirect chains (301, 302, etc.)
+- 🤖 AI-powered fix suggestions (rule-based engine)
+- ⚡ Real-time CLI monitoring (Rich UI)
+- 📊 Generate HTML reports (SEO-style output)
 
-*# 🔗 LinkSentry v1.1 → v4.0 (Pro)*
+---
 
+## 🧠 Key Features
 
+### 🌐 Crawling Engine
+- Async deep crawler (BFS-based)
+- Domain-safe crawling
+- Handles internal links, assets, scripts
 
-*\*\*Advanced Broken URL Checker + SEO Crawler + AI Fix Suggestion Tool\*\**
+### 🔴 Broken Link Detection
+- HTTP status analysis
+- Timeout & connection error handling
+- Instant broken URL filtering
 
+### 🔁 Redirect Tracking
+- Detects redirect chains
+- Shows final destination URL
 
+### ⚡ Real-Time CLI Dashboard
+- Live table updates using `rich`
+- Speed monitoring (URLs/sec)
+- Broken link counter
 
-*Developed by: \[@csejobaer](https://github.com/csejobaer)*
+### 📄 Report Generator
+- HTML report output
+- Includes only broken URLs
+- Clean SEO-style format
 
+---
 
+## 📁 Project Structure
 
-*---*
+```
 
+BrokenURL/
+│
+├── main.py
+├── cli/
+│   └── cli.py
+│
+├── crawler/
+│   └── crawler.py
+│
+├── core/
+│   ├── scanner.py
+│   ├── url_utils.py
+│   └── ai_fix.py
+│
+├── report/
+│   └── report_generator.py
+│
+└── output/
+└── report.html
 
+````
 
-*## 🚀 Overview*
+---
 
+## ⚙️ Installation Guide
 
+### 1️⃣ Clone Repository
 
-*LinkSentry is a high-performance asynchronous web crawler and broken link analyzer built with Python.*
+```bash
+git clone https://github.com/csejobaer/LinkSentry.git
+cd LinkSentry
+````
 
+---
 
+### 2️⃣ Create Virtual Environment (Recommended)
 
-*It helps you:*
+```bash
+python3 -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
+```
 
+---
 
+### 3️⃣ Install Dependencies
 
-*- 🔍 Crawl websites (up to 10,000+ URLs)*
+```bash
+pip install aiohttp
+pip install beautifulsoup4
+pip install rich
+```
 
-*- ❌ Detect broken links (404, 403, 500, ERROR)*
+---
 
-*- 🔁 Track redirect chains (301, 302, etc.)*
+## 🚀 How to Run
 
-*- 🤖 AI-powered fix suggestions (basic rule-based engine)*
+```bash
+python3 main.py
+```
 
-*- ⚡ Real-time CLI monitoring (Rich UI)*
+---
 
-*- 📊 Generate HTML reports (SEO-style output)*
+## 🖥️ Usage Example
 
+```
+Enter website URL: https://prothomalo.com
 
+🌐 Crawling website...
+✔ Total URLs found: 124
 
-*---*
+⚡ Speed: 45 URLs/sec | 🔴 Broken: 5 | 🌐 Total: 124
 
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ URL                   ┃ STATUS ┃ RESULT    ┃ AI FIX       ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+┃ https://site.com/...  ┃ 404    ┃ 🔴 BROKEN ┃ Check URL    ┃
+└───────────────────────┴────────┴───────────┴──────────────┘
+```
 
+---
 
-*## 🧠 Key Features*
+## 📊 Output Report
 
+After scanning, report is saved at:
 
+```
+output/report.html
+```
 
-*### 🌐 Crawling Engine*
+### Includes:
 
-*- Async deep crawler (BFS-based)*
+* Only broken URLs
+* Status codes
+* Suggested fixes
+* Clean SEO-style layout
 
-*- Domain-safe crawling*
+---
 
-*- Handles internal links, assets, scripts*
+## 🤖 AI Fix System
 
+Basic rule-based suggestions:
 
+* 404 → "Check URL or remove link"
+* 403 → "Permission restricted resource"
+* 500 → "Server-side issue"
+* Timeout → "Connection unstable"
 
-*### 🔴 Broken Link Detection*
+---
 
-*- HTTP status analysis*
+## ⚡ Performance
 
-*- Error handling (timeouts, connection failure)*
+* Handles up to **10,000+ URLs**
+* Async concurrency crawling
+* Optimized HTTP sessions
+* Low memory usage
 
-*- Filters broken URLs instantly*
+---
 
+## 🧪 Requirements
 
+* Python 3.9+
+* Linux / Windows / macOS
 
-*### 🔁 Redirect Tracking*
+---
 
-*- Detects redirect chains*
+## 📦 Dependencies
 
-*- Shows final destination URL*
+```
+aiohttp
+beautifulsoup4
+rich
+```
 
+---
 
+## 🛠️ Future Improvements
 
-*### ⚡ Real-Time CLI Dashboard*
+* 🌐 Playwright browser-based crawler
+* 🤖 AI-powered smart SEO analyzer
+* 📊 Web dashboard (React UI)
+* 🔗 External link analysis
+* 📈 Graph-based crawl visualization
 
-*- Live table updates using `rich`*
+---
 
-*- Speed monitoring (URLs/sec)*
+## 👨‍💻 Author
 
-*- Broken link counter*
+**Jobaer Hossain (csejobaer)**
+GitHub: [https://github.com/csejobaer](https://github.com/csejobaer)
 
+---
 
+## ⚠️ Disclaimer
 
-*### 📄 Report Generator*
+This tool is for educational and SEO auditing purposes only.
+Do not use it for unauthorized website scanning.
 
-*- HTML report output*
+---
 
-*- Only broken URLs included*
+## ⭐ Support
 
-*- SEO-style structured format*
+If you like this project:
 
+* ⭐ Star the repo
+* 🍴 Fork it
+* 🧠 Contribute improvements
 
+---
 
-*---*
+## 🚀 License
 
+MIT License
 
+```
 
-*## 📁 Project Structure*
+---
 
+If you want, I can upgrade this to:
+- 🔥 :contentReference[oaicite:0]{index=0}
+- 📸 :contentReference[oaicite:1]{index=1}
+- 🧩 :contentReference[oaicite:2]{index=2}
 
-
-*```*
-
-
-
-*BrokenURL/*
-
-*│*
-
-*├── main.py*
-
-*├── cli/*
-
-*│   └── cli.py*
-
-*│*
-
-*├── crawler/*
-
-*│   └── crawler.py*
-
-*│*
-
-*├── core/*
-
-*│   ├── scanner.py*
-
-*│   ├── url\_utils.py*
-
-*│   └── ai\_fix.py*
-
-*│*
-
-*├── report/*
-
-*│   └── report\_generator.py*
-
-*│*
-
-*└── output/*
-
-*└── report.html*
-
-
-
-*````*
-
-
-
-*---*
-
-
-
-*## ⚙️ Installation Guide*
-
-
-
-*### 1️⃣ Clone Repository*
-
-
-
-*```bash*
-
-*git clone https://github.com/csejobaer/LinkSentry.git*
-
-*cd LinkSentry*
-
-*````*
-
-
-
-*---*
-
-
-
-*### 2️⃣ Create Virtual Environment (Recommended)*
-
-
-
-*```bash*
-
-*python3 -m venv venv*
-
-*source venv/bin/activate   # Linux/Mac*
-
-*venv\\Scripts\\activate      # Windows*
-
-*```*
-
-
-
-*---*
-
-
-
-*### 3️⃣ Install Dependencies*
-
-
-
-*```bash*
-
-*pip install aiohttp*
-
-*pip install beautifulsoup4*
-
-*pip install rich*
-
-*```*
-
-
-
-*---*
-
-
-
-*## 🚀 How to Run*
-
-
-
-*```bash*
-
-*python3 main.py*
-
-*```*
-
-
-
-*---*
-
-
-
-*## 🖥️ Usage Example*
-
-
-
-*```*
-
-*Enter website URL: https://prothomalo.com*
-
-
-
-*🌐 Crawling website...*
-
-*✔ Total URLs found: 124*
-
-
-
-*⚡ Speed: 45 URLs/sec | 🔴 Broken: 5 | 🌐 Total: 124*
-
-
-
-*┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━┓*
-
-*┃ URL                   ┃ STATUS ┃ RESULT    ┃ AI FIX       ┃*
-
-*┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━┩*
-
-*┃ https://site.com/...  ┃ 404    ┃ 🔴 BROKEN ┃ Check URL    ┃*
-
-*└───────────────────────┴────────┴───────────┴──────────────┘*
-
-*```*
-
-
-
-*---*
-
-
-
-*## 📊 Output Report*
-
-
-
-*After scanning, report is saved at:*
-
-
-
-*```*
-
-*output/report.html*
-
-*```*
-
-
-
-*Includes:*
-
-
-
-*\* Only broken URLs*
-
-*\* Status codes*
-
-*\* Suggested fixes*
-
-*\* Clean SEO-style layout*
-
-
-
-*---*
-
-
-
-*## 🤖 AI Fix System*
-
-
-
-*Basic rule-based suggestions:*
-
-
-
-*\* 404 → "Check URL or remove link"*
-
-*\* 403 → "Permission restricted resource"*
-
-*\* 500 → "Server-side issue"*
-
-*\* Timeout → "Connection unstable"*
-
-
-
-*---*
-
-
-
-*## ⚡ Performance*
-
-
-
-*\* Up to \*\*10,000 URLs\*\**
-
-*\* Async concurrency crawling*
-
-*\* Optimized HTTP sessions*
-
-*\* Low memory footprint*
-
-
-
-*---*
-
-
-
-*## 🧪 Requirements*
-
-
-
-*\* Python 3.9+*
-
-*\* Linux / Windows / MacOS*
-
-
-
-*---*
-
-
-
-*## 📦 Dependencies*
-
-
-
-*```*
-
-*aiohttp*
-
-*beautifulsoup4*
-
-*rich*
-
-*```*
-
-
-
-*---*
-
-
-
-*## 🛠️ Future Improvements*
-
-
-
-*\* 🌐 Playwright browser-based crawler*
-
-*\* 🤖 AI-powered smart SEO analyzer*
-
-*\* 📊 Web dashboard (React UI)*
-
-*\* 🔗 External link analysis*
-
-*\* 📈 Graph-based crawl visualization*
-
-
-
-*---*
-
-
-
-*## 👨‍💻 Author*
-
-
-
-*\*\*Jobaer Hossain (csejobaer)\*\**
-
-*GitHub: \[https://github.com/csejobaer](https://github.com/csejobaer)*
-
-
-
-*---*
-
-
-
-*## ⚠️ Disclaimer*
-
-
-
-*This tool is for educational and SEO auditing purposes only.*
-
-*Do not use it for unauthorized website scanning.*
-
-
-
-*---*
-
-
-
-*## ⭐ Support*
-
-
-
-*If you like this project:*
-
-
-
-*\* ⭐ Star the repo*
-
-*\* 🍴 Fork it*
-
-*\* 🧠 Contribute improvements*
-
-
-
-*---*
-
-
-
-*## 🚀 License*
-
-
-
-*MIT License*
-
+Just tell me 👍
+```
